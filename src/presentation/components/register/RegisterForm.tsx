@@ -20,8 +20,12 @@ import {
   type Theme,
 } from "@mui/material";
 import { type FieldInputProps, useFormik } from "formik";
+import { useRouter } from "next/navigation";
 import { type ReactElement, useMemo, useState } from "react";
 
+import { RegisterFoundationUseCase } from "@/domain/usecases/auth/RegisterFoundationUseCase";
+import { appContainer } from "@/infrastructure/ioc/container";
+import { USE_CASE_TYPES } from "@/infrastructure/ioc/usecases/usecases.types";
 import { Button, Chip } from "@/presentation/components/atoms";
 import { registerValidationSchema, type RegisterFormValues } from "@/presentation/components/register/registerValidation";
 
@@ -84,6 +88,13 @@ function PasswordField({ label, placeholder, fieldProps, error, disabled, textFi
 
 export function RegisterForm({ title, subtitle, ctaIcon, badgeIcon }: RegisterFormProps) {
   const theme = useTheme();
+  const router = useRouter();
+  const registerFoundationUseCase = useMemo(
+    () => appContainer.get<RegisterFoundationUseCase>(USE_CASE_TYPES.RegisterFoundationUseCase),
+    [],
+  );
+
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const textFieldStyles = useMemo<SxProps<Theme>>(
     () => ({
@@ -120,9 +131,24 @@ export function RegisterForm({ title, subtitle, ctaIcon, badgeIcon }: RegisterFo
     validateOnChange: false,
     validateOnBlur: true,
     onSubmit: async (values, helpers) => {
+      setSubmitError(null);
+
       try {
-        await new Promise((resolve) => setTimeout(resolve, 700));
-        console.log("Register form submitted", values);
+        await registerFoundationUseCase.execute({
+          foundationName: values.foundationName.trim(),
+          officialEmail: values.officialEmail.trim(),
+          password: values.password,
+          taxId: values.taxId.trim() || undefined,
+        });
+
+        router.push("/dashboard");
+      } catch (error) {
+        const errorMessage =
+          error instanceof Error && error.message
+            ? error.message
+            : "Ocurrió un error al registrar la fundación. Inténtalo nuevamente.";
+
+        setSubmitError(errorMessage);
       } finally {
         helpers.setSubmitting(false);
       }
@@ -264,6 +290,25 @@ export function RegisterForm({ title, subtitle, ctaIcon, badgeIcon }: RegisterFo
         >
           {formik.isSubmitting ? "Enviando..." : "Register Foundation"}
         </Button>
+
+        {submitError && (
+          <Box
+            role="alert"
+            sx={{
+              borderRadius: 1,
+              border: "1px solid",
+              borderColor: theme.palette.error.light,
+              backgroundColor: alpha(theme.palette.error.light, 0.12),
+              color: theme.palette.error.main,
+              px: 2,
+              py: 1.5,
+              fontSize: 14,
+              fontWeight: 600,
+            }}
+          >
+            {submitError}
+          </Box>
+        )}
 
         <Stack direction="row" alignItems="center" spacing={1}>
           <Chip

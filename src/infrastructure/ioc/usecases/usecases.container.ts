@@ -1,9 +1,12 @@
 import { ContainerModule, ContainerModuleLoadOptions } from "inversify";
 
 import type { IAnimalRepository } from "@/domain/repositories/IAnimalRepository";
+import type { IAuthRepository } from "@/domain/repositories/IAuthRepository";
 import type { IDebugRepository } from "@/domain/repositories/IDebugRepository";
+import type { IFoundationRepository } from "@/domain/repositories/IFoundationRepository";
 import { DebugUseCase } from "@/domain/usecases/debug/DebugUseCase";
 import { GetHomeAnimalsUseCase } from "@/domain/usecases/animals/GetHomeAnimalsUseCase";
+import { RegisterFoundationUseCase } from "@/domain/usecases/auth/RegisterFoundationUseCase";
 import { REPOSITORY_TYPES } from "../repositories/repositories.types";
 import { USE_CASE_TYPES } from "./usecases.types";
 
@@ -26,6 +29,17 @@ const useCasesModule = new ContainerModule(
         );
 
         return new GetHomeAnimalsUseCase(animalRepository);
+      })
+      .inSingletonScope();
+
+    bind<RegisterFoundationUseCase>(USE_CASE_TYPES.RegisterFoundationUseCase)
+      .toDynamicValue((context) => {
+        const authRepository = context.get<IAuthRepository>(REPOSITORY_TYPES.AuthRepository);
+        const foundationRepository = context.get<IFoundationRepository>(
+          REPOSITORY_TYPES.FoundationRepository,
+        );
+
+        return new RegisterFoundationUseCase(authRepository, foundationRepository);
       })
       .inSingletonScope();
   },
