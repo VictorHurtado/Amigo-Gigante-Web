@@ -1,0 +1,14 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "myFoundation": "My Foundation",
+    "animals": "Animals",
+    "adoptions": "Adoptions"
+  },
+  "header": {
+    "notifications": "Notifications",
+    "menu": "Menu"
+  },
+  "copyright": "© {year} Amigo Gigante"
+}
+

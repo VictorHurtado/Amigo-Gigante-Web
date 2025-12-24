@@ -1,0 +1,88 @@
+{
+  "title": "Editar Perfil de Fundación",
+  "subtitle": "Actualiza los detalles de tu organización para que los adoptantes puedan contactarte fácilmente.",
+  "logo": {
+    "title": "Logo de la Fundación",
+    "help": "Tamaño recomendado 400x400px. Formatos soportados: JPG, PNG.",
+    "upload": "Subir Nuevo",
+    "remove": "Eliminar"
+  },
+  "fields": {
+    "name": {
+      "label": "Nombre de la Fundación",
+      "placeholder": "Ingresa el nombre de tu fundación"
+    },
+    "description": {
+      "label": "Descripción",
+      "placeholder": "Describe tu fundación...",
+      "charCount": "{current}/500 caracteres"
+    },
+    "address": {
+      "label": "Dirección",
+      "placeholder": "Ingresa la dirección"
+    },
+    "city": {
+      "label": "Ciudad",
+      "placeholder": "Ingresa la ciudad"
+    },
+    "country": {
+      "label": "País",
+      "placeholder": "Selecciona el país"
+    },
+    "publicEmail": {
+      "label": "Email Público",
+      "placeholder": "contacto@fundacion.org"
+    },
+    "publicPhone": {
+      "label": "Teléfono Público",
+      "placeholder": "+34 93 123 4567"
+    },
+    "instagramUrl": {
+      "label": "URL de Instagram",
+      "placeholder": "https://instagram.com/..."
+    },
+    "whatsappUrl": {
+      "label": "URL de WhatsApp",
+      "placeholder": "https://wa.me/..."
+    }
+  },
+  "sections": {
+    "location": "Ubicación",
+    "contact": "Contacto Público",
+    "social": "Redes Sociales"
+  },
+  "buttons": {
+    "cancel": "Cancelar",
+    "save": "Guardar Cambios"
+  },
+  "validation": {
+    "name": {
+      "required": "El nombre de la fundación es requerido",
+      "minLength": "El nombre debe tener al menos 3 caracteres"
+    },
+    "description": {
+      "required": "La descripción es requerida",
+      "maxLength": "La descripción no puede exceder 500 caracteres"
+    },
+    "address": {
+      "required": "La dirección es requerida"
+    },
+    "city": {
+      "required": "La ciudad es requerida"
+    },
+    "country": {
+      "required": "El país es requerido"
+    },
+    "publicEmail": {
+      "required": "El email público es requerido",
+      "invalid": "Ingresa un email válido"
+    },
+    "instagramUrl": {
+      "invalid": "Ingresa una URL válida de Instagram"
+    },
+    "whatsappUrl": {
+      "invalid": "Ingresa una URL válida de WhatsApp"
+    }
+  }
+}
+
