@@ -78,6 +78,22 @@ No incluye:
 - Tailwind se usa para layout/spacing/responsive utilities (si está habilitado).
 - No agregar librerías de estilos adicionales sin HU específica.
 
+### Traducciones (OBLIGATORIO si hay UI con texto)
+- **TODOS los textos visibles en la UI deben estar traducidos** (español e inglés).
+- Usar el sistema de traducciones configurado en HU-016 (`next-intl`).
+- Agregar traducciones en los archivos correspondientes:
+  - `src/messages/es/<namespace>.json` (español)
+  - `src/messages/en/<namespace>.json` (inglés)
+- Organizar traducciones por namespace:
+  - `common.json`: textos comunes (botones, labels, mensajes genéricos)
+  - `home.json`: textos de la página home
+  - `register.json`: textos de registro
+  - `[feature].json`: textos específicos de cada feature
+- **NO hardcodear textos en español o inglés** en componentes.
+- Usar `useTranslations` hook de `next-intl` para acceder a traducciones.
+- Keys descriptivas y anidadas: `home.hero.title`, `register.form.email.label`.
+- Mantener consistencia: mismas keys en ambos idiomas.
+
 ### Dependencias / Paquetes
 - No agregar dependencias nuevas salvo que esta HU lo indique explícitamente.
 - Si aparece error 403/conectividad:
@@ -112,5 +128,10 @@ Comandos mínimos:
 - [ ] `npm run build` OK
 - [ ] Sin violaciones de capas
 - [ ] Sin cambios fuera del alcance
+- [ ] **Traducciones incluidas** (si aplica UI con texto):
+  - [ ] Textos agregados en `src/messages/es/<namespace>.json`
+  - [ ] Textos agregados en `src/messages/en/<namespace>.json`
+  - [ ] Componentes usan `useTranslations` (no textos hardcodeados)
+  - [ ] Keys consistentes entre idiomas
 - Commit sugerido:
   `<tipo>: <mensaje>`
