@@ -1,0 +1,54 @@
+{
+  "buttons": {
+    "search": "Search",
+    "login": "Log In",
+    "register": "Sign Up",
+    "cancel": "Cancel",
+    "apply": "Apply",
+    "show": "Show",
+    "hide": "Hide",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "visitStore": "Visit Store",
+    "tryAiRecommender": "Try AI Recommender"
+  },
+  "labels": {
+    "foundationName": "Foundation Name",
+    "officialEmail": "Official Email",
+    "taxId": "Tax ID (optional)",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "type": "Type",
+    "location": "Location"
+  },
+  "placeholders": {
+    "search": "Search by name, city or type",
+    "cityOrRegion": "City or region",
+    "foundationName": "Enter your foundation's official name",
+    "officialEmail": "foundation@email.com",
+    "taxId": "Add your tax ID",
+    "password": "Create a strong password",
+    "confirmPassword": "Re-enter your password"
+  },
+  "messages": {
+    "secureRegistration": "Secure Registration",
+    "dataEncrypted": "Data encrypted and protected",
+    "alreadyHaveAccount": "Already have an account?",
+    "logIn": "Log in",
+    "allRightsReserved": "All rights reserved",
+    "foundationOnboarding": "Foundation onboarding"
+  },
+  "errors": {
+    "generic": "An error occurred. Please try again.",
+    "registrationError": "An error occurred while registering the foundation. Please try again."
+  },
+  "filters": {
+    "title": "Filters",
+    "applyFilters": "Apply filters"
+  },
+  "menu": {
+    "open": "Open menu",
+    "close": "Close menu"
+  }
+}
+
