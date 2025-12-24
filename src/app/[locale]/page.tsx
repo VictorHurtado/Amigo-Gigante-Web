@@ -1,3 +1,5 @@
-"use client";
+import Home from "../page";
 
-export { default } from "../page";
+export default function LocaleHomePage() {
+  return <Home />;
+}
