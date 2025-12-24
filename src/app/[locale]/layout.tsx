@@ -11,5 +11,5 @@ export default function LocaleLayout({
 }) {
   setRequestLocale(params.locale);
 
-  return children;
+  return <>{children}</>;
 }
