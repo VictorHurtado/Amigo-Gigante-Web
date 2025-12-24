@@ -5,9 +5,10 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   /* config options here */
-  experimental: {
-    turbopackUseSystemTlsCerts: true,
-  },
+  // Temporalmente deshabilitado para evitar problemas con rutas dinámicas
+  // experimental: {
+  //   turbopackUseSystemTlsCerts: true,
+  // },
   images: {
     remotePatterns: [
       {

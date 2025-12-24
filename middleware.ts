@@ -8,7 +8,11 @@ import { defaultLocale, locales } from "@/i18n/config";
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
-  localePrefix: "as-needed",
+  // "always" asegura que todas las rutas incluyan el locale
+  // Esto hace que / redirija a /es y /register redirija a /es/register
+  localePrefix: "always",
+  // Asegurar que siempre detecte y redirija correctamente
+  localeDetection: true,
 });
 
 // Rutas públicas (acceso sin autenticación). Ejemplos:
@@ -51,9 +55,29 @@ const isPublicPath = (pathname: string): boolean => {
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  
+  // Primero, dejar que next-intl maneje TODAS las redirecciones y reescrituras de locale
   const intlResponse = intlMiddleware(request);
+  
+  // Si next-intl redirigió (307 o 308), devolver esa respuesta inmediatamente
+  if (intlResponse.status === 307 || intlResponse.status === 308) {
+    return intlResponse;
+  }
 
-  if (isPublicPath(pathname)) {
+  // Obtener el pathname final después de que next-intl lo procese
+  // next-intl puede haber reescrito la ruta internamente (ej: /register -> /es/register)
+  const rewriteHeader = intlResponse.headers.get("x-middleware-rewrite");
+  const finalPathname = rewriteHeader
+    ? new URL(rewriteHeader, request.url).pathname
+    : pathname;
+
+  // Normalizar el pathname para verificar rutas públicas
+  // Esto quita el prefijo de locale si existe
+  const normalizedPathname = normalizePathname(finalPathname);
+  const isPublic = isPublicPath(normalizedPathname);
+
+  // Si es una ruta pública, devolver la respuesta de next-intl directamente
+  if (isPublic) {
     return intlResponse;
   }
 
@@ -63,14 +87,15 @@ export async function middleware(request: NextRequest) {
 
   if (!session) {
     const loginUrl = new URL("/login", request.url);
-    loginUrl.searchParams.set("redirectTo", pathname);
+    loginUrl.searchParams.set("redirectTo", finalPathname);
     const response = NextResponse.redirect(loginUrl);
+    // Preservar las cookies de next-intl
     intlResponse.cookies.getAll().forEach((cookie) => response.cookies.set(cookie));
     return response;
   }
 
   // TODO: Validar rol contra ROLE_ROUTE_PATTERNS cuando la sesión incluya el rol real.
-  // if (!isRoleAllowed(session, pathname)) {
+  // if (!isRoleAllowed(session, finalPathname)) {
   //   return NextResponse.redirect(new URL("/", request.url));
   // }
 
