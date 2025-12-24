@@ -1,0 +1,54 @@
+{
+  "buttons": {
+    "search": "Buscar",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "cancel": "Cancelar",
+    "apply": "Aplicar",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "visitStore": "Visitar Tienda",
+    "tryAiRecommender": "Probar recomendador IA"
+  },
+  "labels": {
+    "foundationName": "Nombre de la Fundación",
+    "officialEmail": "Email Oficial",
+    "taxId": "Tax ID (opcional)",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "type": "Tipo",
+    "location": "Ubicación"
+  },
+  "placeholders": {
+    "search": "Busca por nombre, ciudad o tipo",
+    "cityOrRegion": "Ciudad o región",
+    "foundationName": "Ingresa el nombre oficial de tu fundación",
+    "officialEmail": "foundation@email.com",
+    "taxId": "Agrega tu Tax ID",
+    "password": "Crea una contraseña segura",
+    "confirmPassword": "Vuelve a ingresar tu contraseña"
+  },
+  "messages": {
+    "secureRegistration": "Registro Seguro",
+    "dataEncrypted": "Datos encriptados y protegidos",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "logIn": "Iniciar Sesión",
+    "allRightsReserved": "Todos los derechos reservados",
+    "foundationOnboarding": "Onboarding de Fundación"
+  },
+  "errors": {
+    "generic": "Ocurrió un error. Inténtalo nuevamente.",
+    "registrationError": "Ocurrió un error al registrar la fundación. Inténtalo nuevamente."
+  },
+  "filters": {
+    "title": "Filtros",
+    "applyFilters": "Aplicar filtros"
+  },
+  "menu": {
+    "open": "Abrir menú",
+    "close": "Cerrar menú"
+  }
+}
+

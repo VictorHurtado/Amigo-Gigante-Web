@@ -1,0 +1,55 @@
+{
+  "title": "Únete a Amigo Gigante",
+  "subtitle": "Registra tu fundación hoy para comenzar a gestionar adopciones y apadrinamientos.",
+  "form": {
+    "foundationName": {
+      "label": "Nombre de la Fundación",
+      "placeholder": "Ingresa el nombre oficial de tu fundación"
+    },
+    "officialEmail": {
+      "label": "Email Oficial",
+      "placeholder": "foundation@email.com"
+    },
+    "taxId": {
+      "label": "Tax ID (opcional)",
+      "placeholder": "Agrega tu Tax ID"
+    },
+    "password": {
+      "label": "Contraseña",
+      "placeholder": "Crea una contraseña segura"
+    },
+    "confirmPassword": {
+      "label": "Confirmar Contraseña",
+      "placeholder": "Vuelve a ingresar tu contraseña"
+    },
+    "acceptTerms": "Acepto los Términos y Condiciones y confirmo que la información es precisa.",
+    "submit": "Registrar Fundación",
+    "submitting": "Enviando..."
+  },
+  "validation": {
+    "foundationName": {
+      "required": "El nombre de la fundación es requerido",
+      "minLength": "El nombre debe tener al menos 3 caracteres"
+    },
+    "officialEmail": {
+      "required": "El email oficial es requerido",
+      "invalid": "Ingresa un email válido"
+    },
+    "password": {
+      "required": "La contraseña es requerida",
+      "minLength": "La contraseña debe tener al menos 8 caracteres",
+      "pattern": "La contraseña debe contener al menos una letra mayúscula, una minúscula y un número"
+    },
+    "confirmPassword": {
+      "required": "Confirma tu contraseña",
+      "match": "Las contraseñas no coinciden"
+    },
+    "acceptTerms": {
+      "required": "Debes aceptar los términos y condiciones"
+    }
+  },
+  "errors": {
+    "registrationFailed": "Ocurrió un error al registrar la fundación. Inténtalo nuevamente."
+  }
+}
+

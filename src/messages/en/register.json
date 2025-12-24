@@ -1,0 +1,55 @@
+{
+  "title": "Join Amigo Gigante",
+  "subtitle": "Register your foundation today to start managing adoptions and sponsorships.",
+  "form": {
+    "foundationName": {
+      "label": "Foundation Name",
+      "placeholder": "Enter your foundation's official name"
+    },
+    "officialEmail": {
+      "label": "Official Email",
+      "placeholder": "foundation@email.com"
+    },
+    "taxId": {
+      "label": "Tax ID (optional)",
+      "placeholder": "Add your tax ID"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Create a strong password"
+    },
+    "confirmPassword": {
+      "label": "Confirm Password",
+      "placeholder": "Re-enter your password"
+    },
+    "acceptTerms": "I agree to the Terms & Conditions and confirm the information is accurate.",
+    "submit": "Register Foundation",
+    "submitting": "Submitting..."
+  },
+  "validation": {
+    "foundationName": {
+      "required": "Foundation name is required",
+      "minLength": "Name must be at least 3 characters"
+    },
+    "officialEmail": {
+      "required": "Official email is required",
+      "invalid": "Please enter a valid email"
+    },
+    "password": {
+      "required": "Password is required",
+      "minLength": "Password must be at least 8 characters",
+      "pattern": "Password must contain at least one uppercase letter, one lowercase letter, and one number"
+    },
+    "confirmPassword": {
+      "required": "Please confirm your password",
+      "match": "Passwords do not match"
+    },
+    "acceptTerms": {
+      "required": "You must accept the terms and conditions"
+    }
+  },
+  "errors": {
+    "registrationFailed": "An error occurred while registering the foundation. Please try again."
+  }
+}
+

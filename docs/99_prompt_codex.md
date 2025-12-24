@@ -26,6 +26,11 @@ REGLAS:
 - No cambies la arquitectura ni las convenciones.
 - No introduzcas dependencias nuevas sin autorización explícita.
 - No refactorices más allá de lo estrictamente necesario para cumplir la HU.
+- **TRADUCCIONES OBLIGATORIAS**: Si la HU incluye UI con texto visible:
+  - TODOS los textos deben estar traducidos (español e inglés).
+  - Agregar traducciones en `src/messages/es/` y `src/messages/en/`.
+  - Usar `useTranslations` de `next-intl` en componentes.
+  - NO hardcodear textos en español/inglés directamente en componentes.
 
 IMPORTANTE (conectividad / 403):
 - Si durante la ejecución aparece un error 403 o de conectividad porque no alcanzas algún dominio:

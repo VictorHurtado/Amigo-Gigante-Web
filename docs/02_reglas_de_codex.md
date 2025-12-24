@@ -117,11 +117,17 @@ Prohibido:
 - Lógica de negocio
 - Acceso directo a Supabase
 - Instanciar servicios o repositorios manualmente
+- **Textos hardcodeados en español o inglés** (usar sistema de traducciones)
 
 Reglas:
 - Consumir únicamente Use Cases
 - Manejar loading / error / empty states
 - UI reactiva, no imperativa
+- **TRADUCCIONES OBLIGATORIAS**: Todos los textos visibles deben usar `useTranslations` de `next-intl`
+  - Agregar traducciones en `src/messages/es/<namespace>.json` y `src/messages/en/<namespace>.json`
+  - Organizar por namespace (common, home, register, [feature])
+  - Keys descriptivas y anidadas
+  - Mismas keys en ambos idiomas
 
 ---
 
