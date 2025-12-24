@@ -1,0 +1,31 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "registerFoundation": "Register Foundation"
+  },
+  "form": {
+    "title": "Welcome back, Partner",
+    "subtitle": "Log in to manage your adoptions and sponsorships",
+    "email": {
+      "label": "Email Address",
+      "placeholder": "name@foundation.org"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "••••••••"
+    },
+    "forgotPassword": "Forgot Password?",
+    "secureLogin": "Secure SSL encrypted login",
+    "submit": "Log In",
+    "newUser": "New to Amigo Gigante?",
+    "registerLink": "Register your foundation"
+  },
+  "leftColumn": {
+    "badge": "Adopt & Care",
+    "title": "Every paw matters.",
+    "description": "Join over 500 foundations making a difference in the lives of animals every day."
+  }
+}
+

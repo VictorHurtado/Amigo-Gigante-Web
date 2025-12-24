@@ -1,0 +1,31 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "registerFoundation": "Registrar Fundación"
+  },
+  "form": {
+    "title": "Bienvenido de nuevo, Socio",
+    "subtitle": "Inicia sesión para gestionar tus adopciones y apadrinamientos",
+    "email": {
+      "label": "Dirección de Email",
+      "placeholder": "name@foundation.org"
+    },
+    "password": {
+      "label": "Contraseña",
+      "placeholder": "••••••••"
+    },
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "secureLogin": "Inicio de sesión seguro SSL encriptado",
+    "submit": "Iniciar Sesión",
+    "newUser": "¿Nuevo en Amigo Gigante?",
+    "registerLink": "Registra tu fundación"
+  },
+  "leftColumn": {
+    "badge": "Adopta y Cuida",
+    "title": "Cada pata importa.",
+    "description": "Únete a más de 500 fundaciones haciendo la diferencia en la vida de los animales cada día."
+  }
+}
+
