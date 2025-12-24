@@ -1,11 +1,14 @@
 {
   "header": {
+    "title": "Amigo Gigante",
     "home": "Home",
     "about": "About",
     "contact": "Contact",
-    "registerFoundation": "Register Foundation"
+    "registerFoundation": "Register Foundation",
+    "openMenu": "Open menu"
   },
   "form": {
+    "kicker": "Foundation portal",
     "title": "Welcome back, Partner",
     "subtitle": "Log in to manage your adoptions and sponsorships",
     "email": {
@@ -14,7 +17,9 @@
     },
     "password": {
       "label": "Password",
-      "placeholder": "••••••••"
+      "placeholder": "••••••••",
+      "show": "Show password",
+      "hide": "Hide password"
     },
     "forgotPassword": "Forgot Password?",
     "secureLogin": "Secure SSL encrypted login",
@@ -25,7 +30,7 @@
   "leftColumn": {
     "badge": "Adopt & Care",
     "title": "Every paw matters.",
-    "description": "Join over 500 foundations making a difference in the lives of animals every day."
+    "description": "Join over 500 foundations making a difference in the lives of animals every day.",
+    "imageAlt": "Golden retriever in a park"
   }
 }
-

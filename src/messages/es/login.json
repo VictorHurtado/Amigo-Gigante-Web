@@ -1,11 +1,14 @@
 {
   "header": {
+    "title": "Amigo Gigante",
     "home": "Inicio",
     "about": "Acerca de",
     "contact": "Contacto",
-    "registerFoundation": "Registrar Fundación"
+    "registerFoundation": "Registrar Fundación",
+    "openMenu": "Abrir menú"
   },
   "form": {
+    "kicker": "Portal de fundaciones",
     "title": "Bienvenido de nuevo, Socio",
     "subtitle": "Inicia sesión para gestionar tus adopciones y apadrinamientos",
     "email": {
@@ -14,7 +17,9 @@
     },
     "password": {
       "label": "Contraseña",
-      "placeholder": "••••••••"
+      "placeholder": "••••••••",
+      "show": "Mostrar contraseña",
+      "hide": "Ocultar contraseña"
     },
     "forgotPassword": "¿Olvidaste tu contraseña?",
     "secureLogin": "Inicio de sesión seguro SSL encriptado",
@@ -25,7 +30,7 @@
   "leftColumn": {
     "badge": "Adopta y Cuida",
     "title": "Cada pata importa.",
-    "description": "Únete a más de 500 fundaciones haciendo la diferencia en la vida de los animales cada día."
+    "description": "Únete a más de 500 fundaciones haciendo la diferencia en la vida de los animales cada día.",
+    "imageAlt": "Perro golden retriever en un parque"
   }
 }
-
