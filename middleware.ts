@@ -8,7 +8,7 @@ import { defaultLocale, locales } from "@/i18n/config";
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
-  localePrefix: "never",
+  localePrefix: "as-needed",
 });
 
 // Rutas públicas (acceso sin autenticación). Ejemplos:
