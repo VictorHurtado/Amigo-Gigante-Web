@@ -17,11 +17,11 @@ CONTEXTO OBLIGATORIO:
    - docs/00_vision.md
    - docs/01_arquitectura.md
    - docs/02_reglas_de_codex.md
-   - HUs/HU-017.md
+   - HUs/HU-019.md
 2) Ignora cualquier otro archivo del repositorio (incluyendo otras HUs y docs adicionales).
 
 REGLAS:
-- Implementa EXACTAMENTE lo definido en HUs/HU-017.md.
+- Implementa EXACTAMENTE lo definido en HUs/HU-019.md.
 - No inventes requisitos ni agregues features no solicitadas.
 - No cambies la arquitectura ni las convenciones.
 - No introduzcas dependencias nuevas sin autorización explícita.
@@ -59,7 +59,7 @@ Si algo no está claro, pregunta antes de continuar.
 
 ## 🧾 Cómo usar este prompt
 
-1) Reemplaza `HU-017` por la HU real  
+1) Reemplaza `HU-019` por la HU real  
    Ejemplo:
    - `HUs/HU-002.md`
 
